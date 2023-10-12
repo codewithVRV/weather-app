@@ -5,7 +5,7 @@ import './Home.css'
 function Home () {
     return (
         <div className='weather-app-wrapper'>
-            <div className='d-flex justify-content-center justify-content-around '>
+            <div className='d-flex '>
                 <SideBar />
                 <MainData />
             </div>
