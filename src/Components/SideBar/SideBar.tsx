@@ -1,6 +1,8 @@
 import './SideBar.css'
 
 function SideBar () {
+
+    
     return (
         <div className="container left-content">
             <div className="row">
