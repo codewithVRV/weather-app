@@ -3,4 +3,6 @@ export default interface DayForecast {
     avgtemp_c: number,
     avgtemp_f: number,
     condition: string,
+    sunrise: string,
+    sunset: string,
 }
