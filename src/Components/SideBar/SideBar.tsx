@@ -1,8 +1,11 @@
+import { useSelector } from 'react-redux';
 import './SideBar.css'
+import ReduxState from '../../Interfaces/ReduxState';
 
 function SideBar () {
 
-    
+    const currentData = useSelector((state : ReduxState) => state.forecast.data.currentData)
+    const currentLocation = useSelector((state: ReduxState) => state.forecast.data.location)
     return (
         <div className="container left-content">
             <div className="row">
@@ -19,12 +22,12 @@ function SideBar () {
             <div className="row">
                 <div className="col ">
                     <div className='lower-content'>
-                        <h1>38 <span>°C</span> </h1>
+                        <h1>{currentData.temp_c} <span>°C</span> </h1>
                         <p>Thursday, 6:38</p>
                     </div>
                     <div className='bottom-section'>
                         <i className="bi bi-geo-alt"></i>
-                        <p>Uttar Pradesh, Meerut</p>
+                        <p>{currentLocation.country}, {currentLocation.region}, {currentLocation.name}</p>
                     </div>
                 </div>
                 

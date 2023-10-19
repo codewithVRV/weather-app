@@ -1,6 +1,12 @@
 import './MainData.css'
+import MainLower from '../MainLower/MainLower';
+import ReduxState from '../../Interfaces/ReduxState';
+import { useSelector } from 'react-redux';
 
 function MainData () {
+    const currentForecast = useSelector((state : ReduxState) => state.forecast.data.dayForecast)
+    console.log("currentForecst", currentForecast)
+    // console.log("forecast", currentForecast)
     return (
         <div className="container right-content">
             <div className="row">
@@ -16,49 +22,55 @@ function MainData () {
                         <div className='day-img-wrapper'>
                             <img src="https://i.ibb.co/rb4rrJL/26.png" alt="" className='img-fluid' />
                         </div>
-                        <h5>27 °c</h5>
+                        <h5>{currentForecast[0].avgtemp_c} °c</h5>
                     </div>
                     <div className='day-wrapper'>
                         <p>Monday</p>
                         <div className='day-img-wrapper'>
                             <img src="https://i.ibb.co/rb4rrJL/26.png" alt="" className='img-fluid' />
                         </div>
-                        <h5>27 °c</h5>
+                        <h5>{currentForecast[1].avgtemp_c} °c</h5>
+                        {/* <h5>26 °c</h5> */}
                     </div>
                     <div className='day-wrapper'>
                         <p>Monday</p>
                         <div className='day-img-wrapper'>
                             <img src="https://i.ibb.co/rb4rrJL/26.png" alt="" className='img-fluid' />
                         </div>
-                        <h5>27 °c</h5>
+                        <h5>{currentForecast[2].avgtemp_c} °c</h5>
+                        {/* <h5>26 °c</h5> */}
                     </div>
                     <div className='day-wrapper'>
                         <p>Monday</p>
                         <div className='day-img-wrapper'>
                             <img src="https://i.ibb.co/rb4rrJL/26.png" alt="" className='img-fluid' />
                         </div>
-                        <h5>27 °c</h5>
+                        <h5>{currentForecast[3].avgtemp_c} °c</h5>
+                        {/* <h5>26 °c</h5> */}
                     </div>
                     <div className='day-wrapper'>
                         <p>Monday</p>
                         <div className='day-img-wrapper'>
                             <img src="https://i.ibb.co/rb4rrJL/26.png" alt="" className='img-fluid' />
                         </div>
-                        <h5>27 °c</h5>
+                        <h5>{currentForecast[4].avgtemp_c} °c</h5>
+                        {/* <h5>26°c</h5> */}
                     </div>
                     <div className='day-wrapper'>
                         <p>Monday</p>
                         <div className='day-img-wrapper'>
                             <img src="https://i.ibb.co/rb4rrJL/26.png" alt="" className='img-fluid' />
                         </div>
-                        <h5>27 °c</h5>
+                        <h5>{currentForecast[5].avgtemp_c} °c</h5>
+                        {/* <h5>26 °c</h5> */}
                     </div>
                     <div className='day-wrapper'>
                         <p>Monday</p>
                         <div className='day-img-wrapper'>
                             <img src="https://i.ibb.co/rb4rrJL/26.png" alt="" className='img-fluid' />
                         </div>
-                        <h5>27 °c</h5>
+                        <h5>{currentForecast[6].avgtemp_c} °c</h5>
+                        {/* <h5>26 °c</h5> */}
                     </div>
                 </div>
             </div>
@@ -68,40 +80,7 @@ function MainData () {
                 </div>
             </div>
 
-            <div className="row">
-                <div className="col right-bottom-content">
-                    <div className='single-card-wrapper'>
-                        <h4>Humidity</h4>
-                        <h2>37.6%</h2>
-                        <p>moderate</p>
-                    </div>
-                    <div className='single-card-wrapper'>
-                        <h4>Humidity</h4>
-                        <h2>37.6%</h2>
-                        <p>moderate</p>
-                    </div>
-                    <div className='single-card-wrapper'>
-                        <h4>Humidity</h4>
-                        <h2>37.6%</h2>
-                        <p>moderate</p>
-                    </div>
-                    <div className='single-card-wrapper'>
-                        <h4>Humidity</h4>
-                        <h2>37.6%</h2>
-                        <p>moderate</p>
-                    </div>
-                    <div className='single-card-wrapper'>
-                        <h4>Humidity</h4>
-                        <h2>37.6%</h2>
-                        <p>moderate</p>
-                    </div>
-                    <div className='single-card-wrapper'>
-                        <h4>Humidity</h4>
-                        <h2>37.6%</h2>
-                        <p>moderate</p>
-                    </div>
-                </div>
-            </div>
+            <MainLower />
         </div>
     )
 }
