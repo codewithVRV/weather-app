@@ -27,7 +27,7 @@ function SideBar () {
                     </div>
                     <div className='bottom-section'>
                         <i className="bi bi-geo-alt"></i>
-                        <p>{currentLocation.country}, {currentLocation.region}, {currentLocation.name}</p>
+                        <p> {currentLocation.region}, {currentLocation.name}, {currentLocation.country},</p>
                     </div>
                 </div>
                 

@@ -33,13 +33,11 @@ const initialState : ForecastDataState = {
 }
 
 
-export const fetchData = createAsyncThunk('data/fetchdata', async () => {
+export const fetchData = createAsyncThunk('data/fetchdata', async (city : string) => {
     try{
-        // navigator.geolocation.getCurrentPosition((position) => {
-        //     console.log(position.coords)
-        // })
-        const response = await axiosInstance.get(`forecast.json?key=${import.meta.env.VITE_API_KEY}&q=meerut&aqi=yes&days=7`)
-        console.log("response of thunk is",response)
+        
+        const response = await axiosInstance.get(`forecast.json?key=${import.meta.env.VITE_API_KEY}&q=${city}&aqi=yes&days=7`)
+        // console.log("response of thunk is",response)
         return response;
     }
     catch (error) {
