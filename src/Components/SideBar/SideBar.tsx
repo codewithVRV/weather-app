@@ -10,7 +10,9 @@ function SideBar () {
         <div className="container left-content">
             <div className="row">
                 <div className="col upper-content">
-                    <input type="text" className="form-control search-bar"  placeholder="Search here..." />
+                    <input type="text" className="form-control search-bar" 
+                     onChange={(e) => console.log(e.target.value)}
+                     placeholder="Search here..." />
                     <i className="bi bi-search s-icon"></i>
                 </div>
             </div>

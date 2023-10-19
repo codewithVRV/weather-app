@@ -5,8 +5,6 @@ import { useSelector } from 'react-redux';
 
 function MainData () {
     const currentForecast = useSelector((state : ReduxState) => state.forecast.data.dayForecast)
-    // console.log("currentForecst", currentForecast)
-    // console.log("forecast", currentForecast)
     const weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     return (
         <div className="container right-content">
@@ -19,60 +17,53 @@ function MainData () {
             <div className="row">
                 <div className="col parent-day-wrapper">
                     <div className='day-wrapper'>
-                        <p>{weekDays[new Date(currentForecast[0].date).getDay()]}</p>
+                        <p>{weekDays[new Date(currentForecast[0]?.date).getDay()]}</p>
                         <div className='day-img-wrapper'>
                             <img src="https://i.ibb.co/rb4rrJL/26.png" alt="" className='img-fluid' />
                         </div>
-                        {/* <h5>26</h5> */}
                         <h5>{currentForecast[0]?.avgtemp_c} °c</h5>
                     </div>
                     <div className='day-wrapper'>
-                        <p>{weekDays[new Date(currentForecast[1].date).getDay()]}</p>
+                        <p>{weekDays[new Date(currentForecast[1]?.date).getDay()]}</p>
                         <div className='day-img-wrapper'>
                             <img src="https://i.ibb.co/rb4rrJL/26.png" alt="" className='img-fluid' />
                         </div>
                         <h5>{currentForecast[1]?.avgtemp_c} °c</h5>
-                        {/* <h5>26 °c</h5> */}
                     </div>
                     <div className='day-wrapper'>
-                        <p>{weekDays[new Date(currentForecast[2].date).getDay()]}</p>
+                        <p>{weekDays[new Date(currentForecast[2]?.date).getDay()]}</p>
                         <div className='day-img-wrapper'>
                             <img src="https://i.ibb.co/rb4rrJL/26.png" alt="" className='img-fluid' />
                         </div>
                         <h5>{currentForecast[2]?.avgtemp_c} °c</h5>
-                        {/* <h5>26 °c</h5> */}
                     </div>
                     <div className='day-wrapper'>
-                        <p>{weekDays[new Date(currentForecast[3].date).getDay()]}</p>
+                        <p>{weekDays[new Date(currentForecast[3]?.date).getDay()]}</p>
                         <div className='day-img-wrapper'>
                             <img src="https://i.ibb.co/rb4rrJL/26.png" alt="" className='img-fluid' />
                         </div>
                         <h5>{currentForecast[3]?.avgtemp_c} °c</h5>
-                        {/* <h5>26 °c</h5> */}
                     </div>
                     <div className='day-wrapper'>
-                        <p>{weekDays[new Date(currentForecast[4].date).getDay()]}</p>
+                        <p>{weekDays[new Date(currentForecast[4]?.date).getDay()]}</p>
                         <div className='day-img-wrapper'>
                             <img src="https://i.ibb.co/rb4rrJL/26.png" alt="" className='img-fluid' />
                         </div>
                         <h5>{currentForecast[4]?.avgtemp_c} °c</h5>
-                        {/* <h5>26°c</h5> */}
                     </div>
                     <div className='day-wrapper'>
-                        <p>{weekDays[new Date(currentForecast[5].date).getDay()]}</p>
+                        <p>{weekDays[new Date(currentForecast[5]?.date).getDay()]}</p>
                         <div className='day-img-wrapper'>
                             <img src="https://i.ibb.co/rb4rrJL/26.png" alt="" className='img-fluid' />
                         </div>
                         <h5>{currentForecast[5]?.avgtemp_c} °c</h5>
-                        {/* <h5>26 °c</h5> */}
                     </div>
                     <div className='day-wrapper'>
-                        <p>{weekDays[new Date(currentForecast[6].date).getDay()]}</p>
+                        <p>{weekDays[new Date(currentForecast[6]?.date).getDay()]}</p>
                         <div className='day-img-wrapper'>
                             <img src="https://i.ibb.co/rb4rrJL/26.png" alt="" className='img-fluid' />
                         </div>
                         <h5>{currentForecast[6]?.avgtemp_c} °c</h5>
-                        {/* <h5>26 °c</h5> */}
                     </div>
                 </div>
             </div>

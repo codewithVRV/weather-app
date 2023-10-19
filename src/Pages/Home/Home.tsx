@@ -13,10 +13,8 @@ function Home () {
 
     useEffect (() => {
         navigator.geolocation.getCurrentPosition( async (position) => {
-            // console.log(position.coords)
             // const response = await axios.get(`https://us1.locationiq.com/v1/reverse?key=${import.meta.env.VITE_LOCATION_KEY}&lat=${position.coords.latitude}&lon=${position.coords.longitude}&format=json`)
             const response = await axios.get(`https://us1.locationiq.com/v1/reverse?key=${import.meta.env.VITE_LOCATION_KEY}&lat=${position.coords.latitude}&lon=${position.coords.longitude}&format=json`);
-            // console.log("response", response)
             setCity(response?.data?.address?.city)
         })
         if(!city)
