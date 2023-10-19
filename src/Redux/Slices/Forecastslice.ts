@@ -20,8 +20,8 @@ const initialState : ForecastDataState = {
             humidity: 0,
             vis_km: 0,
             aqi: 0,
-            // sunrise: '',
-            // sunset: '',
+            sunrise: '',
+            sunset: '',
             temp_c: 0,
             temp_f: 0,
             condition: '',
@@ -63,7 +63,6 @@ const forecastSlice = createSlice({
             state.data.location.localtime = location?.localtime;
 
             // setting currentData here
-            console.log("current data is", current)
 
             // state.data.currentData = currentdata
             state.data.currentData.UV = current?.UV
@@ -75,8 +74,9 @@ const forecastSlice = createSlice({
             state.data.currentData.temp_f = current?.temp_f
             state.data.currentData.condition = current?.condition.text
             state.data.currentData.is_day = current?.is_day
-            // state.data.currentData.chance_of_rain = current?.is_day
-            // state.data.currentData.sunrise = current?.air_quality.pm2_5
+            state.data.currentData.chance_of_rain = forecast?.forecastday[0].day.daily_chance_of_rain
+            state.data.currentData.sunrise = forecast?.forecastday[0].astro.sunrise
+            state.data.currentData.sunset = forecast?.forecastday[0].astro.sunset
 
 
             // setting dayForecast 
@@ -87,8 +87,8 @@ const forecastSlice = createSlice({
                     avgtemp_c: forecastItem.day.avgtemp_c,
                     avgtemp_f: forecastItem.day.avgtemp_f,
                     condition: forecastItem.day.condition.text,
-                    sunrise: forecastItem.astro.sunrise,
-                    sunset: forecastItem.astro.sunset,
+                    // sunrise: forecastItem.astro.sunrise,
+                    // sunset: forecastItem.astro.sunset,
                 }
             })
 
