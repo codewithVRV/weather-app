@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 
 function MainData () {
     const currentForecast = useSelector((state : ReduxState) => state.forecast.data.dayForecast)
-    console.log("currentForecst", currentForecast)
+    // console.log("currentForecst", currentForecast)
     // console.log("forecast", currentForecast)
     return (
         <div className="container right-content">
@@ -22,14 +22,15 @@ function MainData () {
                         <div className='day-img-wrapper'>
                             <img src="https://i.ibb.co/rb4rrJL/26.png" alt="" className='img-fluid' />
                         </div>
-                        <h5>{currentForecast[0].avgtemp_c} °c</h5>
+                        {/* <h5>26</h5> */}
+                        <h5>{currentForecast[0]?.avgtemp_c} °c</h5>
                     </div>
                     <div className='day-wrapper'>
                         <p>Monday</p>
                         <div className='day-img-wrapper'>
                             <img src="https://i.ibb.co/rb4rrJL/26.png" alt="" className='img-fluid' />
                         </div>
-                        <h5>{currentForecast[1].avgtemp_c} °c</h5>
+                        <h5>{currentForecast[1]?.avgtemp_c} °c</h5>
                         {/* <h5>26 °c</h5> */}
                     </div>
                     <div className='day-wrapper'>
@@ -37,7 +38,7 @@ function MainData () {
                         <div className='day-img-wrapper'>
                             <img src="https://i.ibb.co/rb4rrJL/26.png" alt="" className='img-fluid' />
                         </div>
-                        <h5>{currentForecast[2].avgtemp_c} °c</h5>
+                        <h5>{currentForecast[2]?.avgtemp_c} °c</h5>
                         {/* <h5>26 °c</h5> */}
                     </div>
                     <div className='day-wrapper'>
@@ -45,7 +46,7 @@ function MainData () {
                         <div className='day-img-wrapper'>
                             <img src="https://i.ibb.co/rb4rrJL/26.png" alt="" className='img-fluid' />
                         </div>
-                        <h5>{currentForecast[3].avgtemp_c} °c</h5>
+                        <h5>{currentForecast[3]?.avgtemp_c} °c</h5>
                         {/* <h5>26 °c</h5> */}
                     </div>
                     <div className='day-wrapper'>
@@ -53,7 +54,7 @@ function MainData () {
                         <div className='day-img-wrapper'>
                             <img src="https://i.ibb.co/rb4rrJL/26.png" alt="" className='img-fluid' />
                         </div>
-                        <h5>{currentForecast[4].avgtemp_c} °c</h5>
+                        <h5>{currentForecast[4]?.avgtemp_c} °c</h5>
                         {/* <h5>26°c</h5> */}
                     </div>
                     <div className='day-wrapper'>
@@ -61,7 +62,7 @@ function MainData () {
                         <div className='day-img-wrapper'>
                             <img src="https://i.ibb.co/rb4rrJL/26.png" alt="" className='img-fluid' />
                         </div>
-                        <h5>{currentForecast[5].avgtemp_c} °c</h5>
+                        <h5>{currentForecast[5]?.avgtemp_c} °c</h5>
                         {/* <h5>26 °c</h5> */}
                     </div>
                     <div className='day-wrapper'>
@@ -69,7 +70,7 @@ function MainData () {
                         <div className='day-img-wrapper'>
                             <img src="https://i.ibb.co/rb4rrJL/26.png" alt="" className='img-fluid' />
                         </div>
-                        <h5>{currentForecast[6].avgtemp_c} °c</h5>
+                        <h5>{currentForecast[6]?.avgtemp_c} °c</h5>
                         {/* <h5>26 °c</h5> */}
                     </div>
                 </div>
