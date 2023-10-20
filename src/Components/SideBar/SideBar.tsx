@@ -1,19 +1,27 @@
-import { useSelector } from 'react-redux';
+import { useSelector, } from 'react-redux';
 import './SideBar.css'
 import ReduxState from '../../Interfaces/ReduxState';
 
+import {useState} from 'react'
 function SideBar () {
 
     const currentData = useSelector((state : ReduxState) => state.forecast.data.currentData)
     const currentLocation = useSelector((state: ReduxState) => state.forecast.data.location)
+    const [inputCity, setInputCity] = useState('')
+    console.log("inputCity", inputCity)
+
+    function searchCity () {
+
+    }
+
     return (
         <div className="container left-content">
             <div className="row">
                 <div className="col upper-content">
                     <input type="text" className="form-control search-bar" 
-                     onChange={(e) => console.log(e.target.value)}
+                     onChange={(e) => setInputCity(e.target.value)}
                      placeholder="Search here..." />
-                    <i className="bi bi-search s-icon"></i>
+                    <i className="bi bi-search s-icon" onClick={searchCity}></i>
                 </div>
             </div>
             <div className="row">

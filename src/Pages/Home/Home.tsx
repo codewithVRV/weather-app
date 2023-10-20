@@ -18,7 +18,7 @@ function Home () {
             setCity(response?.data?.address?.city)
         })
         if(!city)
-            dispatcher(fetchData("delhi"))
+            dispatcher(fetchData("meerut"))
         else 
             dispatcher(fetchData(city))
     }, [city])

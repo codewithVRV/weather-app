@@ -23,8 +23,12 @@
     font-size: 18px;
     padding-left: 4px;
     font-weight: 600;
+    cursor: pointer;
 }
-
+.same {
+    display: flex;
+    gap: 1rem;
+}
 .day-wrapper {
     height: 130px;
     width: 85px;
