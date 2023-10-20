@@ -3,15 +3,14 @@ import './SideBar.css'
 import ReduxState from '../../Interfaces/ReduxState';
 
 import {useState} from 'react'
-function SideBar () {
+function SideBar ({newCity} ) {
 
     const currentData = useSelector((state : ReduxState) => state.forecast.data.currentData)
     const currentLocation = useSelector((state: ReduxState) => state.forecast.data.location)
     const [inputCity, setInputCity] = useState('')
-    console.log("inputCity", inputCity)
 
     function searchCity () {
-
+        newCity(inputCity)
     }
 
     return (
